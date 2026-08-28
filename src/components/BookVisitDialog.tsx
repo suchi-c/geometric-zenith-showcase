@@ -14,7 +14,7 @@ export function BookVisitDialog({
   defaultProject,
 }: {
   children: ReactNode;
-  defaultProject?: string;
+  defaultProject?: string | undefined;
 }) {
   return (
     <Dialog>

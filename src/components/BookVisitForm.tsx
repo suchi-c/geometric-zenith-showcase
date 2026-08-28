@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
-export function BookVisitForm({ defaultProject }: { defaultProject?: string }) {
+export function BookVisitForm({ defaultProject }: { defaultProject?: string | undefined }) {
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
@@ -46,7 +46,7 @@ export function BookVisitForm({ defaultProject }: { defaultProject?: string }) {
         <select
           id="project"
           name="project"
-          defaultValue={defaultProject ?? projects[0].slug}
+          defaultValue={defaultProject ?? projects[0]!.slug}
           className="h-10 w-full rounded-sm border border-input bg-transparent px-3 text-sm text-foreground outline-none focus-visible:border-ring"
         >
           {projects.map((p) => (

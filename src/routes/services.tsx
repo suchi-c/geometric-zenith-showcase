@@ -71,7 +71,7 @@ function Services() {
       {detail.map((d, i) => {
         const service = services.find((s) => s.slug === d.slug)!;
         return (
-          <Section key={d.slug} id={d.slug} className={i % 2 === 1 ? "bg-charcoal" : undefined}>
+          <Section key={d.slug} id={d.slug} className={i % 2 === 1 ? "bg-charcoal" : ""}>
             <div
               className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-20 ${
                 i % 2 === 1 ? "lg:[&>figure]:order-last" : ""

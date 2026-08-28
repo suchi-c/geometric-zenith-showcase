@@ -7,8 +7,8 @@ export function Section({
   id,
 }: {
   children: ReactNode;
-  className?: string;
-  id?: string;
+  className?: string | undefined;
+  id?: string | undefined;
 }) {
   return (
     <section id={id} className={cn("px-5 py-24 lg:px-10 lg:py-32", className)}>
